@@ -10,7 +10,6 @@ function removeImg(el) {
     dataTransfer.items.add(file);
   });
   input.files = dataTransfer.files;
-  console.log(input.files);
 }
 
 input.addEventListener("input", () => {

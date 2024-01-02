@@ -52,7 +52,7 @@
             </svg>
             التصنيفات الرئيسية
           </a></li>
-        <li><a class="nLink active" href="./sub-cat.html">
+        <li><a class="nLink" href="./sub-cat.html">
             <svg width="22" height="26" viewBox="0 0 22 26" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M11.1778 16.3816V18.4216C11.1778 18.4793 11.2064 18.5288 11.2563 18.5577L12.8502 19.4795C12.9552 19.5403 13.0857 19.4648 13.0857 19.3433V16.6193L19.6645 12.8147L21.7384 14.014C21.9048 14.1103 22 14.2755 22 14.4679V21.4719C22 21.6644 21.9048 21.8296 21.7384 21.9258L15.6828 25.4278C15.5164 25.5241 15.3259 25.5241 15.1595 25.4278L9.10391 21.9258C8.93751 21.8296 8.84228 21.6644 8.84228 21.4719V15.1337L10.7108 16.2143C10.8586 16.2998 11.0167 16.3555 11.1778 16.3816ZM11.6527 0.572173C11.4863 0.475942 11.2958 0.475942 11.1295 0.572173L5.0738 4.07421C4.90741 4.17044 4.81217 4.3357 4.81217 4.5281V11.5321C4.81217 11.7246 4.90741 11.8898 5.0738 11.986L11.1294 15.488C11.2958 15.5843 11.4863 15.5843 11.6527 15.488L17.7083 11.986C17.8747 11.8898 17.9699 11.7246 17.9699 11.5321V4.5281C17.9699 4.33564 17.8747 4.17044 17.7083 4.07421L15.6344 2.87489L9.05556 6.6795V9.40352C9.05556 9.52496 8.92511 9.60038 8.82009 9.53969L7.22619 8.6179C7.17627 8.58902 7.1477 8.53949 7.1477 8.48173V5.57616L13.7265 1.77154L11.6527 0.572173ZM3.97496 9.45425L2.33547 10.4024V13.308C2.33547 13.3657 2.36404 13.4153 2.41396 13.4441L4.00787 14.3659C4.11283 14.4267 4.24334 14.3512 4.24334 14.2298V12.3477C4.35191 12.4929 4.49079 12.6172 4.65514 12.7123L8.00501 14.6495V19.6408L6.84039 20.3143C6.67399 20.4105 6.48352 20.4105 6.31712 20.3143L0.261631 16.8123C0.0952336 16.7161 0 16.5509 0 16.3584V9.35435C0 9.16189 0.0952336 8.99669 0.261631 8.90046L3.97496 6.75304V9.45425Z"
@@ -60,7 +60,7 @@
             </svg>
             التصنيفات الفرعية
           </a></li>
-        <li><a class="nLink" href="./clients.html">
+        <li><a class="nLink active" href="./clients.html">
             <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M12 8.68604C14.2523 8.68604 16.0781 6.8602 16.0781 4.60791C16.0781 2.35562 14.2523 0.529785 12 0.529785C9.74771 0.529785 7.92188 2.35562 7.92188 4.60791C7.92188 6.8602 9.74771 8.68604 12 8.68604Z"
@@ -127,21 +127,21 @@
     <div class="mainCont" id="main">
       <!-- Start Main Content -->
       <div class="conta p30">
-        <h3> اضافة تصنيف فرعي جديد   </h3>
+        <h3> اضافة عميل جديد  </h3>
       </div>
 
       <form class="foLinks p30">
         <div class="foLIn">
           <div class="secLinks w430">
             <div class="input">
-              <label for="">اسم التصنيف باللغة العربية :</label>
-              <input type="text" placeholder="اسم المنتج باللغة العربية : ">
+              <label for="">اسم العميل :</label>
+              <input type="text" placeholder="اسم العميل">
             </div>
             <div class="input">
-              <label for="file">صورة التصنيف :</label>
+              <label for="file5">شعار العميل :</label>
               <div class="customInput">
-                <input type="file" accept="image/*" hidden id="file">
-                <label for="file">تحميل <i class="fa-regular fa-arrow-up-from-bracket"></i></label>
+                <input class="video" type="file" accept="image/*" id="file5" hidden>
+                <label for="file5">تحميل <i class="fa-regular fa-arrow-up-from-bracket"></i></label>
               </div>
             </div>
             <div class="prImgs" id="iconInner">
@@ -150,26 +150,44 @@
                 <i class="fa-light fa-trash-can" data-name="product.png" onclick="removeImg(this)"></i>
               </div>
             </div>
-
           </div>
           <div class="secLinks w430">
             <div class="input">
-              <label for="">اسم التصنيف باللغة  الانجليزية :</label>
-              <input type="text" placeholder="اسم التصنيف باللغة  الانجليزية : ">
+              <label for="file2">صور السلايدر :</label>
+              <div class="customInput">
+                <input type="file" accept="image/*" multiple hidden id="file2">
+                <label for="file2">تحميل <i class="fa-regular fa-arrow-up-from-bracket"></i></label>
+              </div>
             </div>
-            <div class="input">
-              <label for="">التصنيف الرئيسي :</label>
-              <div class="select">
-                <select name="" id="">
-                  <option value="0">اختر التصنيف الرئيسي</option>
-                  <option value="1">اختر التصنيف 2</option>
-                </select>
-                <i class="fa-regular fa-angle-left"></i>
+            <div class="prImgs slider">
+              <div class="pImg">
+                <img src="../media/product.png" alt="">
+                <i class="fa-light fa-trash-can" data-name="product.png" onclick="removeImg(this)"></i>
+              </div>
+              <div class="pImg">
+                <img src="../media/product.png" alt="">
+                <i class="fa-light fa-trash-can" data-name="product.png" onclick="removeImg(this)"></i>
+              </div>
+              <div class="pImg">
+                <img src="../media/product.png" alt="">
+                <i class="fa-light fa-trash-can" data-name="product.png" onclick="removeImg(this)"></i>
+              </div>
+              <div class="pImg">
+                <img src="../media/product.png" alt="">
+                <i class="fa-light fa-trash-can" data-name="product.png" onclick="removeImg(this)"></i>
+              </div>
+              <div class="pImg">
+                <img src="../media/product.png" alt="">
+                <i class="fa-light fa-trash-can" data-name="product.png" onclick="removeImg(this)"></i>
+              </div>
+              <div class="pImg">
+                <img src="../media/product.png" alt="">
+                <i class="fa-light fa-trash-can" data-name="product.png" onclick="removeImg(this)"></i>
               </div>
             </div>
           </div>
         </div>
-        <button class="saveBtn" type="submit">اضافة التصنيف  </button>
+        <button class="saveBtn" type="submit">اضافة العميل</button>
       </form>
       <!-- End Main Content -->
     </div>
@@ -178,7 +196,7 @@
 </body>
 <script src="../js/main.js"></script>
 <script src="../js/links.js"></script>
-<script src="../js/cat.js"></script>
+<script src="../js/client.js"></script>
 <script src="../js/select.js"></script>
 
 </html>

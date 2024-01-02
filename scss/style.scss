@@ -277,7 +277,9 @@ nav.nav {
     padding-bottom: 5px;
     font-size: 0.9em;
   }
-  input,textarea,select {
+  input,
+  textarea,
+  select {
     width: 100%;
     height: 40px;
     @include noBorder();
@@ -291,30 +293,30 @@ nav.nav {
       opacity: 0.6;
     }
   }
-  textarea{
+  textarea {
     height: 170px;
     padding: 10px;
     resize: none;
   }
-  select{
+  select {
     color: #787878;
-    transition: .2s;
+    transition: 0.2s;
     appearance: none;
     cursor: pointer;
   }
 }
-.select{
+.select {
   @include flex();
   position: relative;
-  i{
+  i {
     position: absolute;
     left: 15px;
     color: #787878;
-    transition: .2s;
+    transition: 0.2s;
   }
 }
-.select.activeSelect{
-  i{
+.select.activeSelect {
+  i {
     transform: rotate(-90deg);
     color: $main;
   }
@@ -474,7 +476,7 @@ nav.nav {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 250px;
+  width: 290px;
   height: 100vh;
   padding: 70px 35px 50px 0;
   position: relative;
@@ -519,13 +521,13 @@ nav.nav {
         height: 30px;
         border-radius: 0 10px 10px 0;
         background-color: $dark-main;
-        left: -130px;
+        left: -150px;
         transition: 0.2s;
       }
     }
     .nLink.active {
       &::after {
-        left: -100px;
+        left: -115px;
       }
     }
   }
@@ -606,8 +608,7 @@ nav.nav {
   flex-direction: column;
   gap: 30px;
   align-items: center;
-  justify-content: flex-start;
-  width: calc(100% - 250px);
+  width: calc(100% - 120px);
   height: 100vh;
   overflow-y: scroll;
   background-color: #efefef;
@@ -704,6 +705,9 @@ nav.nav {
       display: block;
     }
   }
+}
+#menu{
+  cursor: pointer;
 }
 @media (max-width: 421px) {
   .alreadyDow {
@@ -928,7 +932,7 @@ nav.nav {
         overflow: hidden !important;
         text-overflow: ellipsis !important;
         white-space: nowrap !important;
-        color: #324C66;
+        color: #324c66;
         img {
           vertical-align: middle !important;
           width: 70px;
@@ -965,26 +969,43 @@ nav.nav {
   padding: 10px 20px;
   word-break: normal;
   text-transform: capitalize;
-  color:$main;
+  color: $main;
   input {
     width: 17px;
     height: 17px;
   }
 }
-@media (max-width:701px) {
-  .tg th{
+@media (max-width: 701px) {
+  .tg th {
     padding: 10px 5px;
   }
 }
-@media (max-width:451px) {
-  .tg th{
+@media (max-width: 451px) {
+  .tg th {
     font-size: 14px;
   }
-  .tg tbody tr td{
+  .tg tbody tr td {
     font-size: 14px;
   }
 }
 .tools {
+  a {
+    @include flex();
+    display: inline-block;
+    img {
+      margin: 0 3px;
+      cursor: pointer;
+      &:nth-child(1) {
+        width: 20px;
+      }
+      &:nth-child(2) {
+        width: 17px;
+      }
+      &:nth-child(3) {
+        width: 17px;
+      }
+    }
+  }
   img {
     margin: 0 3px;
     cursor: pointer;
@@ -999,12 +1020,12 @@ nav.nav {
     }
   }
 }
-.pageCont{
+.pageCont {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-.taIn{
+.taIn {
   width: 100%;
   overflow: auto;
   &::-webkit-scrollbar {
@@ -1016,7 +1037,6 @@ nav.nav {
   &::-webkit-scrollbar-thumb {
     background: $main;
   }
-
 }
 .paginationCont {
   display: flex;
@@ -1030,8 +1050,8 @@ nav.nav {
   position: relative;
   direction: ltr;
 }
-@media (max-width:601px) {
-  .paginationCont{
+@media (max-width: 601px) {
+  .paginationCont {
     margin-top: 40px;
   }
 }
@@ -1043,7 +1063,7 @@ nav.nav {
   }
 }
 @media (max-width: 801px) {
-  .p30{
+  .p30 {
     padding: 0 20px;
   }
 }
@@ -1125,7 +1145,7 @@ nav.nav {
   }
 }
 
-.btns{
+.btns {
   display: flex;
   justify-content: left;
   gap: 10px;
@@ -1133,20 +1153,20 @@ nav.nav {
   flex-wrap: wrap;
 }
 
-@media (max-width:431px) {
-  .btns{
+@media (max-width: 431px) {
+  .btns {
     flex-direction: column;
-    .saveBtn{
+    .saveBtn {
       width: 100%;
       flex-grow: 1;
     }
   }
 }
-.customInput{
+.customInput {
   width: 100%;
   display: flex;
   gap: 10px;
-  label{
+  label {
     @include flex();
     gap: 10px;
     //width: 120px;
@@ -1154,7 +1174,7 @@ nav.nav {
     height: 40px;
     @include flex();
     border: 1px solid $red;
-    background-image: linear-gradient(to right,$main,$dark-main);
+    background-image: linear-gradient(to right, $main, $dark-main);
     color: #fff;
     font-size: 1em;
     border-radius: 5px;
@@ -1162,24 +1182,28 @@ nav.nav {
   }
 }
 
-.prImgs{
+.prImgs {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   padding-top: 10px;
+  user-select: none
 }
-.pImg{
+.pImg {
   @include flex();
   position: relative;
   width: 100px;
-  img{
+  img,video {
     width: 100%;
     height: 60px;
     object-fit: cover;
     border-radius: 5px;
   }
-  i{
+  video{
+    height: 150px;
+  }
+  i {
     @include flex();
     position: absolute;
     top: -5px;
@@ -1187,54 +1211,169 @@ nav.nav {
     @include circle(25px);
     color: #fff;
     background-color: $main;
-    font-size: .9em;
+    font-size: 0.9em;
     cursor: pointer;
     z-index: 2;
   }
 }
-.oneImg{
+.oneImg {
   width: 300px;
-  img{
+  img {
     height: 170px;
   }
-  i{
+  i {
     top: -10px;
     left: -10px;
     @include circle(33px);
     font-size: 1.2em;
   }
 }
-.w430{
+.w430 {
   width: 430px;
 }
-@media (max-width:951px) {
-  .w430{
+@media (max-width: 951px) {
+  .w430 {
     width: 100%;
   }
-  
 }
-@media (max-width:431px) {
-  .oneImg{
+@media (max-width: 431px) {
+  .oneImg {
     width: 100%;
-  
   }
 }
-.mi{
+.mi {
   position: relative;
   overflow: hidden;
-  &::after{
-    content: '';
+  &::after {
+    content: "";
     width: 100%;
     height: 100%;
     position: absolute;
     background-color: #3d3d3d23;
     left: -100%;
-    transition: .3s all ease;
+    transition: 0.3s all ease;
     z-index: 5;
   }
-  &:hover{
-    &::after{
+  &:hover {
+    &::after {
       left: 0;
+    }
+  }
+}
+
+.contactPop {
+  display: block;
+  width: 400px;
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  gap: 10px;
+  background-color: #fff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.251);
+  position: relative;
+}
+
+#exit {
+  @include flex();
+  @include circle(30px);
+  color: $main;
+  position: absolute;
+  font-size: 0.9em;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.er {
+  width: 100%;
+  display: flex;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  span {
+    font-size: 0.9em;
+    &:nth-child(2) {
+      color: $main;
+    }
+  }
+  a {
+    @include flex();
+    height: 40px;
+    padding: 0 20px;
+    font-size: 0.8em;
+    gap: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, $main, $dark-main);
+  }
+  p {
+    color: $main;
+    font-size: 0.9em;
+    width: 100%;
+  }
+}
+.p100 {
+  @include flex();
+  padding: 50px 0 !important;
+}
+
+.w800 {
+  max-width: 800px;
+  width: 100%;
+}
+.mes {
+  width: 100%;
+  @include flex();
+  display: none;
+  position: fixed;
+  overflow-y: scroll;
+  height: 100vh;
+  direction: ltr;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #f4f7f9f0;
+  padding: 50px 20px;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+.flc {
+  flex-direction: column;
+}
+
+@media (max-width: 971px) {
+  .p100 {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 551px) {
+  .contactPop {
+    width: 100%;
+    padding: 30px 20px;
+
+    gap: 10px;
+  }
+
+  .er {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+    
+
+  }
+  .fdr{
+    flex-direction: row;
+  }
+}
+.slider{
+  .pImg{
+    width: 135px;
+    img{
+      height: 80px;
     }
   }
 }
